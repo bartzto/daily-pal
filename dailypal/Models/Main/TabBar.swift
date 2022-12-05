@@ -15,6 +15,11 @@ struct TabBar: View {
                     Label("Home", systemImage: "house")
                 }
             
+            HabitsView()
+                .tabItem {
+                    Label("Habits", systemImage: "person.circle")
+                }
+            
             SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gear")

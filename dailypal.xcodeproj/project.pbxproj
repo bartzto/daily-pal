@@ -14,6 +14,10 @@
 		A1E238B1293E6E63007AA29B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E238B0293E6E63007AA29B /* HomeView.swift */; };
 		A1E238B3293E6E6D007AA29B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E238B2293E6E6D007AA29B /* SettingsView.swift */; };
 		A1E238B5293E6F72007AA29B /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E238B4293E6F72007AA29B /* TabBar.swift */; };
+		A1E238B8293E7343007AA29B /* HabitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E238B7293E7343007AA29B /* HabitsView.swift */; };
+		A1E238BB293E76B7007AA29B /* DailyPal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1E238B9293E76B7007AA29B /* DailyPal.xcdatamodeld */; };
+		A1E238BD293E78DA007AA29B /* HabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E238BC293E78DA007AA29B /* HabitViewModel.swift */; };
+		A1E238C0293E7A86007AA29B /* AddNewHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E238BF293E7A86007AA29B /* AddNewHabit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		A1E238B0293E6E63007AA29B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A1E238B2293E6E6D007AA29B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A1E238B4293E6F72007AA29B /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		A1E238B7293E7343007AA29B /* HabitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitsView.swift; sourceTree = "<group>"; };
+		A1E238BA293E76B7007AA29B /* DailyPal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyPal.xcdatamodel; sourceTree = "<group>"; };
+		A1E238BC293E78DA007AA29B /* HabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitViewModel.swift; sourceTree = "<group>"; };
+		A1E238BF293E7A86007AA29B /* AddNewHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewHabit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 		A1E238AA293E6DFF007AA29B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A1E238BE293E7A74007AA29B /* Habits */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -85,6 +94,7 @@
 		A1E238AB293E6E07007AA29B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A1E238BC293E78DA007AA29B /* HabitViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -106,6 +116,7 @@
 				A1E238B0293E6E63007AA29B /* HomeView.swift */,
 				A1E238B2293E6E6D007AA29B /* SettingsView.swift */,
 				A1E238B4293E6F72007AA29B /* TabBar.swift */,
+				A1E238B7293E7343007AA29B /* HabitsView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -120,8 +131,17 @@
 		A1E238AF293E6E31007AA29B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A1E238B9293E76B7007AA29B /* DailyPal.xcdatamodeld */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		A1E238BE293E7A74007AA29B /* Habits */ = {
+			isa = PBXGroup;
+			children = (
+				A1E238BF293E7A86007AA29B /* AddNewHabit.swift */,
+			);
+			path = Habits;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +215,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1E238B1293E6E63007AA29B /* HomeView.swift in Sources */,
+				A1E238B8293E7343007AA29B /* HabitsView.swift in Sources */,
+				A1E238C0293E7A86007AA29B /* AddNewHabit.swift in Sources */,
 				A1E238B3293E6E6D007AA29B /* SettingsView.swift in Sources */,
+				A1E238BD293E78DA007AA29B /* HabitViewModel.swift in Sources */,
 				A1E2389F293E6AAD007AA29B /* ContentView.swift in Sources */,
 				A1E2389D293E6AAD007AA29B /* dailypalApp.swift in Sources */,
+				A1E238BB293E76B7007AA29B /* DailyPal.xcdatamodeld in Sources */,
 				A1E238B5293E6F72007AA29B /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +423,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A1E238B9293E76B7007AA29B /* DailyPal.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A1E238BA293E76B7007AA29B /* DailyPal.xcdatamodel */,
+			);
+			currentVersion = A1E238BA293E76B7007AA29B /* DailyPal.xcdatamodel */;
+			path = DailyPal.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A1E23891293E6AAD007AA29B /* Project object */;
 }
