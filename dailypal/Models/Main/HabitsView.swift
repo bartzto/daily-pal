@@ -39,9 +39,10 @@ struct HabitsView: View {
         .navigationViewStyle(.stack)
         .preferredColorScheme(.dark)
         .sheet(isPresented: $habitModel.addNewHabit) {
-            
+            habitModel.resetData()
         } content: {
-            
+            AddNewHabit()
+                .environmentObject(habitModel)
         }
     }
 }

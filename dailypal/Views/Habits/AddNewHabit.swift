@@ -45,7 +45,7 @@ struct AddNewHabit: View {
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Frequency")
                         .font(.callout.bold())
-                    let weekDays = Calendar.current.weekdaySymbols ?? []
+                    let weekDays = Calendar.current.weekdaySymbols
                     HStack(spacing: 10) {
                         ForEach(weekDays,id: \.self){day in
                             let index = habitModel.weekDays.firstIndex {value in
@@ -76,7 +76,42 @@ struct AddNewHabit: View {
                 Divider()
                     .padding(.vertical,10)
                 
+                HStack{
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Remainder")
+                            .fontWeight(.semibold)
+                        
+                        Text("Just notification")
+                            .font(.caption)
+                            .foregroundColor(.gray)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Toggle(isOn: $habitModel.isRemainderOn) {}
+                        .labelsHidden()
+                }
+                
+                HStack(spacing: 12){
+                    Label {
+                        Text(habitModel.remainderDate.formatted(date: .omitted, time: .shortened))
+                    } icon: {
+                        Image(systemName: "clock")
+                    }
+                    .padding(.horizontal)
+                    .padding(.vertical,12)
+                    .background(Color(.systemGray5).opacity(0.4),in:
+                                    RoundedRectangle(cornerRadius: 6, style: .continuous))
+                    
+                    
+                    TextField("Remainder Text", text: $habitModel.remainderText)
+                        .padding(.horizontal)
+                        .padding(.vertical,10)
+                        .background(Color(.systemGray5),in: RoundedRectangle(cornerRadius: 6, style: .continuous))
+                }
+                .frame(height: habitModel.isRemainderOn ? nil : 0)
+                .opacity(habitModel.isRemainderOn ? 1 : 0)
             }
+            .animation(.easeInOut, value: habitModel.isRemainderOn)
             .frame(maxHeight: .infinity,alignment: .top)
             .padding()
             .navigationBarTitleDisplayMode(.inline)

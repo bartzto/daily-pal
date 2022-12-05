@@ -17,4 +17,8 @@ class HabitViewModel: ObservableObject {
     @Published var isRemainderOn: Bool = false
     @Published var remainderText: String = ""
     @Published var remainderDate: Date = Date()
+    
+    func resetData() {
+        
+    }
 }
