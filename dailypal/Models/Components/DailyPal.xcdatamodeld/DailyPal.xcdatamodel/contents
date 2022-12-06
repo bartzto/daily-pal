@@ -8,6 +8,6 @@
         <attribute name="notificationIDs" optional="YES" attributeType="Transformable" customClassName="[String]"/>
         <attribute name="remainderText" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <attribute name="weekDays" optional="YES" attributeType="Transformable"/>
+        <attribute name="weekDays" optional="YES" attributeType="Transformable" customClassName="[String]"/>
     </entity>
 </model>

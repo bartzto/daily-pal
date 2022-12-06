@@ -35,14 +35,14 @@ struct HabitsView: View {
                 }
             }
             .navigationTitle("Habits")
-        }
-        .navigationViewStyle(.stack)
-        .preferredColorScheme(.dark)
-        .sheet(isPresented: $habitModel.addNewHabit) {
-            habitModel.resetData()
-        } content: {
-            AddNewHabit()
-                .environmentObject(habitModel)
+            .navigationViewStyle(.stack)
+            .preferredColorScheme(.dark)
+            .sheet(isPresented: $habitModel.addNewHabit) {
+                habitModel.resetData()
+            } content: {
+                AddNewHabit()
+                    .environmentObject(habitModel)
+            }
         }
     }
 }
